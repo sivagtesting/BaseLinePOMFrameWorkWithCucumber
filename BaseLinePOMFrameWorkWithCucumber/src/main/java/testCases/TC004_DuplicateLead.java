@@ -5,17 +5,17 @@ import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pages.LoginPage;
+import pages.ViewLeadsPage;
 
-public class TC002_EditLead extends BaseClass {
+public class TC004_DuplicateLead extends BaseClass {
 	
 	@BeforeTest
 	public void setData() {
-		dataSheetName = "TC002_EditLead";
+		dataSheetName = "TC004_DuplicateLead";
 	}
-	
-	
+
 	@Test(dataProvider="fetchData")
-	public void editLeadTest(String uName, String pwd, String mailId, String cName) throws InterruptedException {
+	public void duplicateLeadTest(String uName, String pwd, String mailId) throws InterruptedException {
 		new LoginPage()
 		.enterUserName(uName)
 		.enterPassword(pwd)
@@ -26,12 +26,15 @@ public class TC002_EditLead extends BaseClass {
 		.clickOnEmailTab()
 		.enterEmailID(mailId)
 		.clickFindLeadsButton()
-//		Thread.sleep(3000);
-		.selectFirstLeadId()
+		.selectFirstLeadId();
+		String leadId = driver.findElementById("viewLead_companyName_sp").getText();
+		new ViewLeadsPage()
+		.clickOnDuplicateButton()
 		.verifyTitle()
-		.clickOnEditButton()
-		.enterUpdatedCName(cName)
-		.clickUpdate()
-		.verifyEditLead();
+		.clickCreateLeadButton()
+		.verifyLeadName(leadId);
+		
 	}
+	
+	
 }

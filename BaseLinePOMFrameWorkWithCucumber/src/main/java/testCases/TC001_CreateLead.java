@@ -28,7 +28,7 @@ public class TC001_CreateLead extends BaseClass {
 		.selectIndustry()
 		.enterEmail(mail)
 		.clickCreateLeadButton()
-		.verifyLeadName();
+		.getLeadName();
 	}
 
 }

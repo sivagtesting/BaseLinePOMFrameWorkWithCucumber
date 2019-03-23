@@ -12,10 +12,15 @@ public class MyLeadsPage extends BaseClass {
 		return new CreateLead();
 	}
 
-	public FindLeadsPage clickOnFindLeads() throws InterruptedException {
+	public FindLeadsPage clickOnFindLeads(){
 		driver.findElementByLinkText("Find Leads").click();
-		Thread.sleep(3000);
 		return new FindLeadsPage();
+	}
+	
+	public MergeLeadsPage clickOnMergeLeads() {
+		driver.findElementByLinkText("Merge Leads").click();
+		return new MergeLeadsPage();
+		
 	}
 
 }
