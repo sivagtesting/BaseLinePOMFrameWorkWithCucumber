@@ -7,27 +7,27 @@ import org.openqa.selenium.support.ui.Select;
 
 import base.BaseClass;
 
-public class CreateLead extends BaseClass {
-	public CreateLead() {
+public class CreateLeadPage extends BaseClass {
+	public CreateLeadPage() {
 
 	}
 
-	public CreateLead enterCompanyName(String cName) {
+	public CreateLeadPage enterCompanyName(String cName) {
 		driver.findElementById("createLeadForm_companyName").sendKeys(cName);
 		return this;
 	}
 
-	public CreateLead enterFirstName(String fName) {
+	public CreateLeadPage enterFirstName(String fName) {
 		driver.findElementById("createLeadForm_firstName").sendKeys(fName);
 		return this;
 	}
 
-	public CreateLead enterLastName(String lName) {
+	public CreateLeadPage enterLastName(String lName) {
 		driver.findElementById("createLeadForm_lastName").sendKeys(lName);
 		return this;
 	}
 
-	public CreateLead selectIndustry() {
+	public CreateLeadPage selectIndustry() {
 		int count = 0;
 		WebElement dropDown = driver.findElementById("createLeadForm_industryEnumId");
 		Select dd1 = new Select(dropDown);
@@ -49,7 +49,7 @@ public class CreateLead extends BaseClass {
 		return this;
 	}
 
-	public CreateLead enterEmail(String mail) {
+	public CreateLeadPage enterEmail(String mail) {
 		driver.findElementById("createLeadForm_primaryEmail").sendKeys(mail);
 		return this;
 	}

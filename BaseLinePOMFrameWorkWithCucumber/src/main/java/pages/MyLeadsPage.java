@@ -7,9 +7,9 @@ public class MyLeadsPage extends BaseClass {
 
 	}
 
-	public CreateLead clickOnCreateLead() {
+	public CreateLeadPage clickOnCreateLead() {
 		driver.findElementByLinkText("Create Lead").click();
-		return new CreateLead();
+		return new CreateLeadPage();
 	}
 
 	public FindLeadsPage clickOnFindLeads(){
