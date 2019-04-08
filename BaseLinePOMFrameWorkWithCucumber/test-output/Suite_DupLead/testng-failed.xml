@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite_DupLead]">
+  <parameter name="url" value="http://leaftaps.com/opentaps/control/main"/>
+  <test thread-count="5" name="Test_DupLead(failed)">
+    <classes>
+      <class name="testCases.TC004_DuplicateLead">
+        <methods>
+          <include name="closeApp"/>
+          <include name="duplicateLeadTest" invocation-numbers="1"/>
+          <include name="login"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- testCases.TC004_DuplicateLead -->
+    </classes>
+  </test> <!-- Test_DupLead(failed) -->
+</suite> <!-- Failed suite [Suite_DupLead] -->

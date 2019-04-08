@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite_MergeLead]">
+  <parameter name="url" value="http://leaftaps.com/opentaps/control/main"/>
+  <test thread-count="5" name="Test_MergeLead(failed)">
+    <classes>
+      <class name="testCases.TC005_MergeLead">
+        <methods>
+          <include name="closeApp"/>
+          <include name="login"/>
+          <include name="mergeLeadTest" invocation-numbers="1"/>
+          <include name="setData"/>
+        </methods>
+      </class> <!-- testCases.TC005_MergeLead -->
+    </classes>
+  </test> <!-- Test_MergeLead(failed) -->
+</suite> <!-- Failed suite [Suite_MergeLead] -->
